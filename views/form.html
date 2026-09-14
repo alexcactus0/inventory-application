@@ -1,0 +1,23 @@
+<h1>Add an Item!</h1>
+
+<a href="/"><button>Home</button></a>
+
+<form action="/add-item" method="POST">
+  <input
+    type="text"
+    name="itemName"
+    placeholder="Enter your Item name"
+    required
+  />
+  <select name="itemCategory" id="itemCategory" required>
+    <option value="">select Item category</option>
+    <option value="keyboard">Keyboard</option>
+    <option value="mice">Mice</option>
+    <option value="monitors">Monitors</option>
+    <option value="cpu">CPU</option>
+    <option value="gpu">GPU</option>
+    <option value="memory">Memory (RAM)</option>
+  </select>
+
+  <button type="submit">Submit</button>
+</form>

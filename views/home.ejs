@@ -7,17 +7,12 @@
     <title>Homepage</title>
   </head>
   <body>
-    <nav>
-      <a href="/current-items"><button>Items added</button></a>
-      <button>Items Shop</button>
-    </nav>
-    <br />
-    <h1>HOMEPAGE</h1>
-    <br />
+    <header>
+      <%- include('nav') %>
+      <h1>HOMEPAGE</h1>
+    </header>
     <div class="addItemsPage">
-      <button class="itemsAdded" onclick="">Add Items</button>
-
-      <%- include('form') %>
+      <a href="/add-item"><button class="addItems">Add Items</button></a>
     </div>
   </body>
 </html>
