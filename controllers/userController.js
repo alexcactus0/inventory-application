@@ -1,10 +1,13 @@
 const db = require("../db/queries");
 const path = require("path");
 
+function getHomepage(req, res) {
+  res.render("home");
+}
+
 async function getItems(req, res) {
   const items = await db.getAllItems();
-  console.log("Items: ", items);
-  res.send("Usernames: " + items.map((item) => item.items).join(", "));
+  res.send("Usernames: " + items.map((i) => i.item).join(", "));
 }
 
 async function createItemGet(req, res) {
@@ -18,6 +21,7 @@ async function createItemPost(req, res) {
 }
 
 module.exports = {
+  getHomepage,
   getItems,
   createItemGet,
   createItemPost,

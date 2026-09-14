@@ -5,8 +5,11 @@ async function getAllItems() {
   return rows;
 }
 
-async function insertItem(item) {
-  await pool.query("INSERT INTO items (item) VALUES ($1)", [item]);
+async function insertItem(item, category_id) {
+  await pool.query("INSERT INTO items (item) VALUES ($1, $2)", [
+    item,
+    category_id,
+  ]);
 }
 
 module.exports = {
